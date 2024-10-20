@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://bah4wldmpkvup"]
+
+[ext_resource type="PackedScene" uid="uid://dkn0l2j843qmp" path="res://assets/env/body.tscn" id="1_io563"]
+[ext_resource type="PackedScene" uid="uid://cpicwif5op1il" path="res://assets/characters/ship.tscn" id="2_rqx6i"]
+
+[node name="main" type="Node2D"]
+
+[node name="body" parent="." instance=ExtResource("1_io563")]
+position = Vector2(527, 310)
+mass = 1000
+
+[node name="body2" parent="." instance=ExtResource("1_io563")]
+position = Vector2(2387, 1766)
+mass = 1000
+
+[node name="body3" parent="." instance=ExtResource("1_io563")]
+position = Vector2(2762, -463)
+mass = 1000
+
+[node name="body4" parent="." instance=ExtResource("1_io563")]
+position = Vector2(1088, -2185)
+mass = 1000
+
+[node name="body5" parent="." instance=ExtResource("1_io563")]
+position = Vector2(4932, 850)
+mass = 1000
+
+[node name="body6" parent="." instance=ExtResource("1_io563")]
+position = Vector2(5398, -1557)
+rotation = -2.01606
+mass = 1000
+
+[node name="body7" parent="." instance=ExtResource("1_io563")]
+position = Vector2(7453, -292)
+rotation = -2.01606
+mass = 1000
+
+[node name="body9" parent="." instance=ExtResource("1_io563")]
+position = Vector2(-821.001, 515)
+rotation = -2.01606
+mass = 1000
+
+[node name="body8" parent="." instance=ExtResource("1_io563")]
+position = Vector2(5246, 2058)
+rotation = -2.01606
+mass = 1000
+
+[node name="ship" parent="." instance=ExtResource("2_rqx6i")]
+position = Vector2(1398, 566)

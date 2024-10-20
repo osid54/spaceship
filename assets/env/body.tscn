@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkn0l2j843qmp"]
+
+[ext_resource type="Script" path="res://scripts/body.gd" id="1_b80tg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0kvp4"]
+radius = 128.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5f1wv"]
+radius = 1000.0
+
+[node name="body" type="Node2D"]
+script = ExtResource("1_b80tg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_0kvp4")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5f1wv")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
